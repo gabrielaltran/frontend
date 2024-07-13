@@ -12,8 +12,8 @@ interface ConfirmTripModalProps {
 export function ConfirmTripModal({
   closeConfirmTripModal,
   createTrip,
-  setOwnerName,
-  setOwnerEmail
+  setOwnerEmail,
+  setOwnerName
 }: ConfirmTripModalProps) {
   return (
     <div className="fixed inset-0 bg-black/60 flex items-center justify-center">
@@ -30,7 +30,7 @@ export function ConfirmTripModal({
           Para concluir a criação da viagem para <span className="font-semibold text-zinc-100">Florianópolis, Brasil</span> nas datas de <span className="font-semibold text-zinc-100">16 a 27 de Agosto de 2024</span> preencha seus dados abaixo:
           </p>
         </div>
-
+        
         <form onSubmit={createTrip} className="space-y-3">
           <div className="h-14 px-4 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2">
             <User className="text-zinc-400 size-5" />
@@ -54,9 +54,9 @@ export function ConfirmTripModal({
             />
           </div>
 
-        <Button type="submit" size="full">
-          Confirmar criação da viagem
-        </Button>
+          <Button type="submit" size="full">
+            Confirmar criação da viagem
+          </Button>
         </form>
       </div>
     </div>
